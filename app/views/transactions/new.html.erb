@@ -1,0 +1,17 @@
+<h1>Add a New Transaction</h1>
+<div class="container">
+	<div class="row">
+		<%= form_for @transaction do |f| %>
+			<%=f.label :amount %>
+			<%= f.number_field :amount, class: 'form-control' %>
+
+			<%= f.label :narration %>
+			<%= f.text_field :narration, class: 'form-control' %>
+
+			<%= f.label :type %>
+			<%= f.select(:transaction_type, ["Expense", "Income"]) %>
+
+			<%= f.submit "Add Transaction", class: 'btn btn-primary' %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<h1>All transactions</h1>
+<div class="container">
+	<div class="row">
+		<% @transactions.each do |transaction| %>
+			<div class="col-md-4">
+				Amount: <%= transaction.amount %>
+			</div>
+			<div class="col-md-4">
+				Narration: <%= transaction.narration %>
+			</div>
+			<div class="col-md-4">
+				Type: <%= transaction.transaction_type %>
+			</div>
+		<% end %>
+	</div>
+</div>
